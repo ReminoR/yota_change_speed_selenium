@@ -10,7 +10,7 @@
 pip install -r requirements.txt
 ```
 
-### Заполняем файл .env
+### Создаем файл .env в корневой директории и заполняем его: 
 ```
 LOGIN=your_login_from_yota
 PASSWORD=your_password
