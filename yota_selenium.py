@@ -29,8 +29,12 @@ def auth(driver, login, password, pause):
     assert "Yota" in driver.title
     time.sleep(pause)
 
-    driver.find_element_by_css_selector('input#y-input-0').send_keys(login)
-    driver.find_element_by_css_selector('input#y-input-1').send_keys(password)
+    input_login = driver.find_element_by_css_selector('input#y-input-0')
+    input_login.clear()
+    input_login.send_keys(login)
+    input_password = driver.find_element_by_css_selector('input#y-input-1')
+    input_password.clear()
+    input_password.send_keys(password)
     driver.find_element_by_css_selector('.form-login-page form').submit()
 
 
